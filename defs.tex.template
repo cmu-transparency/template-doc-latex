@@ -1,0 +1,124 @@
+%%% specific to paper, terms
+
+\usepackage{dsfont}
+
+\newcommand{\const}[1]{\text{#1}}
+\newcommand{\dataset}[0]{\mathcal{D}}
+\newcommand{\indicator}[1]{\mathds{1}\paren{#1}}
+\DeclareMathOperator*{\I}{\mathds{I}}
+\DeclareMathOperator*{\1}{\mathds{1}}
+
+%%% THEOREMS
+
+% comment out for llncs
+\newtheorem{theorem}{Theorem}
+%\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
+\newtheorem{property}{Property}
+\newtheorem{corollary}{Corollary}
+
+%\makeatletter
+%\def\thm@space@setup{\thm@preskip=1pt
+%\thm@postskip=1pt}
+%\makeatother
+
+
+%%% code listing
+% \newcommand{\code}[1]{\lstinline!#1!}
+% \newcommand{\mcode}[1]{\text{\code{#1}}}
+
+% %%% misc
+\newcommand{\stacklabel}[1]{\stackrel{\smash{\scriptscriptstyle \mathrm{#1}}}}
+\newcommand{\defeq}{\stacklabel{def}=}
+\newcommand{\defeqq}{\stacklabel{def?}=}
+\newcommand{\tab}{\hspace{0.5in}}
+
+% %%% complexity
+% \newcommand{\bigO}[1]{\mathcal{O}\paren{#1}}
+
+% %%% referencing
+% \newcommand{\mcite}[1]{[citation missing: #1]}
+% \newcommand{\mref}[1]{[reference missing: #1]}
+
+% %%% various parens
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\sparen}[1]{\left[ #1 \right]}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\qm}[1]{``#1''}
+
+% %%% logic
+\newcommand{\nexist}{\cancel{\exists}}
+\newcommand{\nin}{{\; \cancel \in \;}}
+
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+
+% %%% sets
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\integer}{\mathbb{Z}}
+\newcommand{\setsize}[1]{\left|#1\right|}
+
+% %%% probability
+% \DeclareMathOperator*{\E}{\scaleobj{0.85}{\scalerel*{\mathrm{E}}{\sum}}}
+\DeclareMathOperator*{\E}{\mathds{E}}
+% \newcommand{\prob}[2]{\Pr_{#1}[#2]}
+\newcommand{\expect}[1]{\E\paren{#1}}
+\newcommand{\expectsub}[2]{\E_{#1}\sparen{#2}}
+% \newcommand{\dist}[1]{\mathbb{D}\paren{#1}}
+% \newcommand{\given}[0]{\; | \;}
+% \newcommand{\support}[1]{\text{support}\paren{#1}}
+% \newcommand{\distpoint}[1]{\dot{#1}}
+
+
+% %%% information theory / QIF
+% \newcommand{\entropy}[1]{\mathbb{H}\paren{#1}}
+% \newcommand{\minentropy}[1]{\mathbb{H}_\infty\paren{#1}}
+% \newcommand{\vul}[1]{\mathbb{V}\paren{#1}}
+% \newcommand{\guessent}[1]{\mathbb{G}\paren{#1}}
+% \newcommand{\relent}[2]{\mathbb{KL}\paren{#1 \ra #2}}
+% \newcommand{\earthmover}[2]{\mathbb{W}\paren{#1 \ra #2}}
+% \newcommand{\samp}{\ensuremath{\stacklabel{\$}\gets}}
+
+
+% %%% traversals
+% \DeclareMathOperator*{\argmin}{arg\,min}
+% \DeclareMathOperator*{\argmax}{arg\,max}
+% \DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+%\DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
+%\DeclareMathSymbol{\epsilon}{\mathalpha}{greekletters}{"0F}
+%\DeclareMathSymbol{\delta}{\mathalpha}{greekletters}{"0E}
+
+%%% code listings
+%\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+%\lstdefinestyle{customlisp}{
+%  belowcaptionskip=1\baselineskip,
+%  breaklines=true,
+%  language=Lisp,
+%  showstringspaces=false,
+%  numbers=left,
+%  xleftmargin=2em,
+%  framexleftmargin=1.5em,
+%  numbersep=5pt,
+%  numberstyle=\tiny\color{mygray},
+%  basicstyle=\small\ttfamily,
+%  keywordstyle=\color{blue},
+%  commentstyle=\itshape\color{purple!40!black},
+%  % identifierstyle=\color{blue},
+%  stringstyle=\color{orange},
+%  morekeywords={def-rule, ?},
+%  tabsize=2
+%}
+
+%%% formatting edits
+
+%%change spacing before \paragraph
+%\makeatletter
+%\renewcommand{\paragraph}{%
+%  \@startsection{paragraph}{4}%
+%  {\z@}{0.75ex \@plus 0.5ex \@minus .2ex}{-1em}%
+%  {\normalfont\normalsize\bfseries}%
+%}
+%\makeatother

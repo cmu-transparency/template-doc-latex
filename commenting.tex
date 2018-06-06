@@ -1,0 +1,26 @@
+\ifdefined\final
+\else
+\def\enablecomments
+\fi
+
+\ifdefined\draft
+\def\enablecomments{}
+\fi
+
+
+\usepackage{soul}
+
+\definecolor{LightGreen}{rgb}{0.75,1.00,0.75}
+\definecolor{LightBlue} {rgb}{0.75,0.75,1.00}
+\definecolor{LightRed}  {rgb}{1.00,0.75,0.75}
+
+\newcommand{\commentformat}[3]{\sethlcolor{#2}\hl{\textsf{#1: #3}}}
+
+\ifdefined\enablecomments
+  \newcommand{\pxm}   [1]{\commentformat{PM}{LightGreen}{#1}}
+  \newcommand{\anupam}[1]{\commentformat{AD}{Maroon}{#1}}
+  \newcommand{\sm}    [1]{\commentformat{SUMMARY}{LightBlue}{#1}}
+  \newcommand{\smx}   [1]{\commentformat{SUMMARY}{LightRed}{#1}}
+\else
+  \renewcommand{\commentformat}[3]{}
+\fi

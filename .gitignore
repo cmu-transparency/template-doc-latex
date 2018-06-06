@@ -1,0 +1,5 @@
+preamble.pdf
+*.pyc
+*.DS_Store
+experiments/logs/*.txt
+experiments/bench/*.tsv
